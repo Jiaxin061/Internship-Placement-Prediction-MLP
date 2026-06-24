@@ -1,0 +1,34 @@
+Best Model  : MLP-3 (128, 64, 32)
+============================================================
+              precision    recall  f1-score   support
+
+  Not Placed       0.54      0.33      0.41      9108
+      Placed       0.58      0.76      0.66     10892
+
+    accuracy                           0.56     20000
+   macro avg       0.56      0.54      0.53     20000
+weighted avg       0.56      0.56      0.54     20000
+
+
+Architecture Comparison
+============================================================
+Model  Architecture  Accuracy (%)  Precision (%)  Recall (%)  F1 Score (%)  Iterations
+MLP-1         (32,)         56.23          55.54       56.23         54.81          34
+MLP-2      (64, 32)         56.24          55.51       56.24         53.43          25
+MLP-3 (128, 64, 32)         56.43          55.72       56.43         54.21          25
+
+Dataset Signal Analysis
+============================================================
+Majority class baseline  : 54.46%
+Best MLP accuracy        : 56.43%
+Improvement over random  : +1.97 pp
+Max |feature correlation| : 0.0824 (backlogs)
+
+Top 5 Feature Importances
+============================================================
+             Feature  Importance     Std
+            backlogs     0.01279 0.00203
+   internships_count     0.00781 0.00149
+      projects_count     0.00547 0.00246
+  coding_skill_score     0.00439 0.00111
+mock_interview_score     0.00379 0.00177
